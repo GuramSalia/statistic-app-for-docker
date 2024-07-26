@@ -1,0 +1,17 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  jackson:
+    default-property-inclusion: non_null
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/statistics
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,13 @@
+services:
+  artemis:
+    image: 'apache/activemq-artemis:latest'
+    ports:
+      - '61616'
+  mongodb:
+    image: 'mongo:latest'
+    environment:
+      - 'MONGO_INITDB_DATABASE=mydatabase'
+      - 'MONGO_INITDB_ROOT_PASSWORD=secret'
+      - 'MONGO_INITDB_ROOT_USERNAME=root'
+    ports:
+      - '27017'
